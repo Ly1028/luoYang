@@ -1,0 +1,21 @@
+#set($str = ${entity})
+#set($str = $str.toLowerCase())
+package ${package.Entity}${str}.service;
+
+import ${package.Entity}${str}.entity.${entity}Entity;
+import ${superServiceClassPackage};
+
+import java.util.List;
+
+/**
+ * <p>
+ * $!{table.comment} 服务类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+public interface ${table.serviceName} extends ${superServiceClass}<${entity}Entity> {
+
+
+}

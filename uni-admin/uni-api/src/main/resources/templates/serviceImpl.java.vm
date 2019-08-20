@@ -1,0 +1,31 @@
+#set($str = ${entity})
+#set($str = $str.toLowerCase())
+package ${package.Entity}${str}.service.Impl;
+
+import ${package.Entity}${str}.entity.${entity}Entity;
+import ${package.Mapper}${str}.dao.${table.mapperName};
+import ${package.Service}${str}.service.${table.serviceName};
+import ${superServiceImplClassPackage};
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+/**
+ * <p>
+ * $!{table.comment} 服务实现类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Service
+@Transactional(rollbackFor = Exception.class)
+public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.mapperName}, ${entity}Entity> implements ${table.serviceName} {
+
+
+    @Autowired
+    private ${table.mapperName} ${table.entityPath}Dao;
+
+
+        }

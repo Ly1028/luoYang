@@ -1,0 +1,18 @@
+#set($str = ${entity})
+#set($str = $str.toLowerCase())
+package ${package.Entity}${str}.dao;
+
+import ${package.Entity}${str}.entity.${entity}Entity;
+import ${superMapperClassPackage};
+
+/**
+ * <p>
+ * $!{table.comment} Mapper 接口
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+public interface ${table.mapperName} extends ${superMapperClass}<${entity}Entity> {
+
+}

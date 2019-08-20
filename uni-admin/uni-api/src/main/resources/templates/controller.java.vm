@@ -1,0 +1,42 @@
+#set($str = ${entity})
+#set($str = $str.toLowerCase())
+package ${package.Entity}${str}.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+#if(${restControllerStyle})
+import org.springframework.web.bind.annotation.RestController;
+#else
+import org.springframework.stereotype.Controller;
+#end
+#if(${superControllerClassPackage})
+import ${superControllerClassPackage};
+#end
+import org.springframework.beans.factory.annotation.Autowired;
+import ${package.Entity}${str}.service.${table.serviceName};
+import ${package.Entity}${str}.entity.${entity}Entity;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/**
+ *   @description : ${entity} 控制器
+ *   @author ${author}
+ *   @since ${date}
+ */
+#if(${restControllerStyle})
+@RestController
+#else
+@Controller
+#end
+@RequestMapping("#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
+#if(${superControllerClass})
+public class ${table.controllerName} extends ${superControllerClass} {
+#else
+public class ${table.controllerName} {
+#end
+private final Logger logger=LoggerFactory.getLogger(${table.controllerName}.class);
+
+@Autowired
+public ${table.serviceName} ${table.entityPath}Service;
+
+
+}
