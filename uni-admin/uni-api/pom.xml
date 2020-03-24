@@ -3,10 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <artifactId>uni-admin</artifactId>
+        <groupId>com.uni</groupId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.uni</groupId>
     <artifactId>uni-api</artifactId>
@@ -19,6 +18,16 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <artifactId>uni-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <groupId>com.uni</groupId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -50,7 +59,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.1.10</version>
+            <version>${druid.version}</version>
         </dependency>
 
         <dependency>
@@ -67,20 +76,20 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.1.1</version>
+            <version>${mybatis.plus.boot.starter}</version>
         </dependency>
 
         <!-- 逆向工程 -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.1.2</version>
+            <version>${mybatis.plus.generator.version}</version>
         </dependency>
         <!-- mybatisplus逆向工程需要模板引擎，用freemaker也行 -->
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>
-            <version>2.0</version>
+            <version>${velocity.version}</version>
         </dependency>
         <!--velocity End-->
 
@@ -88,7 +97,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.2</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
 
