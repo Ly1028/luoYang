@@ -141,7 +141,7 @@
                         </executions>
                         <configuration>
                             <includeSystemScope>true</includeSystemScope>
-                            <mainClass>com.job.admin.Application</mainClass>
+                            <mainClass>com.uni.api.UniApiApplication</mainClass>
                         </configuration>
                     </plugin>
                     <plugin>
@@ -152,7 +152,7 @@
                             <archive>
                                 <manifest>
                                     <addClasspath>true</addClasspath>
-                                    <mainClass>com.uni.api.UniApiApplication.java</mainClass> <!-- 此处为主入口-->
+                                    <mainClass>com.uni.api.UniApiApplication</mainClass> <!-- 此处为主入口-->
                                 </manifest>
                             </archive>
                         </configuration>
