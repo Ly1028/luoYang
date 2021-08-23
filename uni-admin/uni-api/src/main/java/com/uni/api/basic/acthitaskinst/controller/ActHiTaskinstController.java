@@ -19,7 +19,7 @@ public class ActHiTaskinstController {
 private final Logger logger=LoggerFactory.getLogger(ActHiTaskinstController.class);
 
 @Autowired
-public ActHiTaskinstService actHiTaskinstService;
+private ActHiTaskinstService actHiTaskinstService;
 
 
 }

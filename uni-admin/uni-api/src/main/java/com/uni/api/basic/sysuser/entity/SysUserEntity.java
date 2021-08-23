@@ -8,6 +8,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * <p>
  * SysUser对象
@@ -26,17 +28,20 @@ public class SysUserEntity extends Model<SysUserEntity> {
      * 用户id
      */
     @TableId("id")
+    @NotNull
     private Integer id;
 
     /**
      * 用户名
      */
+    @NotNull
     @TableField("username")
     private String username;
 
     /**
      * 密码
      */
+    @NotNull
     @TableField("password")
     private String password;
 
