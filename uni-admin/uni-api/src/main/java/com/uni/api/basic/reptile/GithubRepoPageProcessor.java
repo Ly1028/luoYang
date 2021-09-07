@@ -9,7 +9,6 @@ import us.codecraft.webmagic.pipeline.JsonFilePipeline;
 import us.codecraft.webmagic.processor.PageProcessor;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
 public class GithubRepoPageProcessor implements PageProcessor {

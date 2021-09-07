@@ -118,6 +118,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.deep007/mitmproxy-java -->
+        <dependency>
+            <groupId>com.deep007</groupId>
+            <artifactId>mitmproxy-java</artifactId>
+            <version>1.0.8</version>
+        </dependency>
+
     </dependencies>
 
     <build>
